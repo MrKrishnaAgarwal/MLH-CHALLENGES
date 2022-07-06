@@ -1,0 +1,31 @@
+/* CREATE TABLE - creates the database*/
+/* entry afterward - name of database*/
+/* (column_name, column_type, primary_key = true or false)*/
+
+--ratings will be 1 (lowest) to 10 (highest)--
+
+--set-up of schema--
+CREATE TABLE pink (pink_id INTEGER PRIMARY KEY, product TEXT, 
+cost INTEGER, stock INTEGER, rating INTEGER);
+
+--manipulation/edits of the table--
+INSERT INTO pink VALUES(1, 'shirt  ', 22, 10, 3.1);
+INSERT INTO pink VALUES(2, 'pants  ', 35, 52, 4);
+INSERT INTO pink VALUES(3, 'skirt  ', 14, 21, 9.5);
+INSERT INTO pink VALUES(4, 'jacket ', 49, 46, 2.9);
+INSERT INTO pink VALUES(5, 'socks  ', 6, 9, 9.9);
+INSERT INTO pink VALUES(6, 'blouse ', 59, 19, 8.7);
+INSERT INTO pink VALUES(7, 'sweater', 60, 27, 7);
+INSERT INTO pink VALUES(8, 'bag    ', 74, 48, 6.8);
+INSERT INTO pink VALUES(9, 'hat    ', 16, 89, 4.5);
+INSERT INTO pink VALUES(10, 'scarf ', 9, 73, 5.3);
+
+--showing the results / filtering--
+--SELECT * FROM pink ORDER BY rating ASC;--
+
+SELECT AVG(cost) FROM pink;
+SELECT AVG(stock) FROM pink;
+SELECT AVG(rating) FROM pink;
+SELECT * FROM pink ORDER BY rating DESC;
+
+/* Krishna Agarwal*/
